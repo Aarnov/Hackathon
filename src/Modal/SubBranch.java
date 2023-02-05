@@ -1,5 +1,6 @@
 package Modal;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class SubBranch {
@@ -8,7 +9,7 @@ public class SubBranch {
 
     boolean hasWorkshop ;
 
-
+ArrayList<Departments> departments;
 
 
     public String getLocation() {
@@ -45,6 +46,7 @@ public class SubBranch {
         String res = sc.next();
         if (res.equalsIgnoreCase("y")){
             hasShowroom = true ;
+
         } else {
             hasShowroom = false;
         }
@@ -56,4 +58,6 @@ public class SubBranch {
             hasWorkshop = false;
         }
     }
+
+
 }

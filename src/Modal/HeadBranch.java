@@ -28,7 +28,6 @@ public class HeadBranch {
     }
 
     public void get_branches(){
-
         for (SubBranch branch:branches) {
             System.out.println(branch.getLocation());
         }

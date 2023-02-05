@@ -17,6 +17,7 @@ public class Main {
 
 
         ArrayList<SubBranch>  branch_list = new ArrayList<SubBranch>() ;
+
         if(email.equalsIgnoreCase("admin@gmail.com")&&(password.equalsIgnoreCase("adminhero"))){
 
                 System.out.println("how many branches do you wanna add?");
@@ -25,6 +26,8 @@ public class Main {
                     SubBranch s1 = new SubBranch();
                     s1.addBranch();
                     branch_list.add(s1);
+
+
                 }
                 HeadBranch b1=new HeadBranch("hellow",branch_list);
                 b1.get_branches();
@@ -37,7 +40,8 @@ User u1 = new User();
 u1.addUserInfo() ;
 u1.showUserInfo() ;
 
-            System.out.println("");
+            HeadBranch b1=new HeadBranch("hellow",branch_list);
+            b1.get_branches();
 
         }
 

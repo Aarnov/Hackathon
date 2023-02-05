@@ -1,29 +1,18 @@
 package Modal;
 
-public class Departments extends
-SubBranch
-{
-    String name;
-    String type;
+import Modal.subDepart.CustomerService;
+import Modal.subDepart.ShowRoom;
+import Modal.subDepart.WorkShop;
 
-    public Departments(String name, String type) {
-        this.name = name;
-        this.type = type;
-    }
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
-    public String getName(){
-        return name;
-    }
+public class Departments extends SubBranch {
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
-    public String getType() {
-        return type;
-    }
+    CustomerService CustomerService;
+    WorkShop WorkShop;
+    ShowRoom ShowRoom;
 
-    public void setType(String type) {
-        this.type = type;
-    }
+
 }
