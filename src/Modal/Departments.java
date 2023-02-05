@@ -17,7 +17,7 @@ public class Departments extends SubBranch {
 
     public void depart_info() {
         System.out.println("Department name:"+this.depart_name+"-"+this.location);
-        System.out.println("Department name:"+this.depart_type);
+        System.out.println("Department type:"+this.depart_type);
         System.out.println("Department Open time:"+this.opening_time);
         System.out.println("Department Closing time:"+this.closing_time);
     }
