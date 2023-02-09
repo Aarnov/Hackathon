@@ -3,12 +3,51 @@ package Modal.subDepart;
 import Modal.SubBranch;
 
 public class WorkShop extends SubBranch {
-
+    public String name;
+    public    String opening_time;
+    public String closing_time;
+    public String contact;
     String aviliable_parts;
 
-    public WorkShop(String type, String name, String opening_time, String closing_time, String contact, String aviliable_parts) {
-        super(type, name, opening_time, closing_time, contact);
+    public WorkShop(String name, String type, String name1, String opening_time, String closing_time, String contact, String aviliable_parts) {
+        super(name, type);
+        this.name = name1;
+        this.opening_time = opening_time;
+        this.closing_time = closing_time;
+        this.contact = contact;
         this.aviliable_parts = aviliable_parts;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getOpening_time() {
+        return opening_time;
+    }
+
+    public void setOpening_time(String opening_time) {
+        this.opening_time = opening_time;
+    }
+
+    public String getClosing_time() {
+        return closing_time;
+    }
+
+    public void setClosing_time(String closing_time) {
+        this.closing_time = closing_time;
+    }
+
+    public String getContact() {
+        return contact;
+    }
+
+    public void setContact(String contact) {
+        this.contact = contact;
     }
 
     public String getAviliable_parts() {
@@ -17,12 +56,5 @@ public class WorkShop extends SubBranch {
 
     public void setAviliable_parts(String aviliable_parts) {
         this.aviliable_parts = aviliable_parts;
-    }
-
-    @Override  public void depart_info() {
-
-        super.depart_info();
-
-        System.out.println("Number of aviliable parts : "+this.aviliable_parts);
     }
 }

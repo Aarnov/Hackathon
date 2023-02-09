@@ -51,6 +51,12 @@ public class Appointment  {
     }
 
     public void appointment_cs(){
-        System.out.println(getUser().+" has booked and appointment at our servicing center located at "+getCs().;
+        System.out.println(getUser().getName()+" has booked and appointment at our servicing center located at "+getCs().getName()+"which opens from "+getCs().getOpening_time()+" to "+getCs().getOpening_time()+".\n If you would like to get in touch with one of our employes then be sure to contact us via our services.."+getCs().getContact());
+    }
+    public void appointment_sr(){
+        System.out.println(getUser().getName()+" has booked and appointment at our servicing center located at "+getSr().getName()+"which opens from "+ getSr().getOpening_time()+" to "+getSr().getClosing_time()+".\n If you would like to get in touch with one of our employes then be sure to contact us via our services.."+getCs().getContact());
+    }
+    public void appointment_ws(){
+        System.out.println(getUser().getName()+" has booked and appointment at our servicing center located at "+getWs().getName()+"which opens from "+getWs().getOpening_time()+" to "+getCs().closing_time+".\n If you would like to get in touch with one of our employes then be sure to contact us via our services.."+getCs().getContact());
     }
 }
