@@ -3,35 +3,29 @@ package Modal;
 import java.util.ArrayList;
 
 public class HeadBranch {
-    String policies;
-  ArrayList<SubBranch> branches;
+ArrayList<Departments> departments;
 
-    public HeadBranch(String policies, ArrayList<SubBranch> branches) {
-        this.policies = policies;
-        this.branches = branches;
+    public HeadBranch(ArrayList<Departments> departments) {
+        this.departments = departments;
     }
 
-    public String getPolicies() {
-        return policies;
+    public ArrayList<Departments> getDepartments() {
+        return departments;
     }
 
-    public void setPolicies(String policies) {
-        this.policies = policies;
+    public void setDepartments(ArrayList<Departments> departments) {
+        this.departments = departments;
     }
 
-    public ArrayList<SubBranch> getBranches() {
-        return branches;
-    }
+    public void show_branches() {
+        for (Departments d : this.departments) {
+            System.out.println(d.location);
+            for (SubBranch j : d.subBranches) {
 
-    public void setBranches(ArrayList<SubBranch> branches) {
-        this.branches = branches;
-    }
+                System.out.println(j.name);
 
-    public void get_branches(){
-        for (SubBranch branch:branches) {
-            System.out.println(branch.getLocation());
-            ArrayList<Departments> departments=branch.departments;
-
+            }
         }
     }
-}
+    }
+

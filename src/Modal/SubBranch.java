@@ -4,81 +4,34 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class SubBranch {
-    String  location;
-     boolean hasShowroom;
+    public String type;
+    public String name;
+    public    String opening_time;
+    public String closing_time;
+    public String contact;
 
-    boolean hasWorkshop ;
 
-ArrayList<Departments> departments;
-
-    public SubBranch(String location, boolean hasShowroom, boolean hasWorkshop, ArrayList<Departments> departments) {
-        this.location = location;
-        this.hasShowroom = hasShowroom;
-        this.hasWorkshop = hasWorkshop;
-        this.departments = departments;
+    public String getType() {
+        return type;
     }
 
-    public SubBranch() {
-
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public ArrayList<Departments> getDepartments() {
-        return departments;
+    public SubBranch(String type, String name, String opening_time, String closing_time, String contact) {
+        this.type = type;
+
+        this.name = name;
+        this.opening_time = opening_time;
+        this.closing_time = closing_time;
+        this.contact = contact;
     }
-
-    public void setDepartments(ArrayList<Departments> departments) {
-        this.departments = departments;
-    }
-
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
-    }
-
-    public boolean isHasShowroom() {
-        return hasShowroom;
-    }
-
-    public void setHasShowroom(boolean hasShowroom) {
-        this.hasShowroom = hasShowroom;
-    }
-
-    public boolean isHasWorkshop() {
-        return hasWorkshop;
-    }
-
-    public void setHasWorkshop(boolean hasWorkshop) {
-        this.hasWorkshop = hasWorkshop;
-    }
-
-
-    public void addBranch() {
-
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter location");
-        this.location = sc.next();
-        System.out.println(location);
-        System.out.println("Does it have showroom (y/n)");
-        String res = sc.next();
-        if (res.equalsIgnoreCase("y")){
-            this.hasShowroom = true ;
-
-        } else {
-            this.hasShowroom = false;
-        }
-        System.out.println("Does it have a workshop (y/n)");
-        String res1 = sc.next();
-        if (res1.equalsIgnoreCase("y")){
-            this.hasWorkshop = true ;
-        } else {
-            this.hasWorkshop = false;
-        }
-    }
-public void  depart_info() {
-    System.out.println("Department location:"+this.location);
+public void depart_info() {
+    System.out.println("Department information");
+    System.out.println("Department Opening time:"+this.opening_time);
+    System.out.println("Department closing time:"+this.closing_time);
+    System.out.println("Department contact:"+this.contact);
 }
 
 }
