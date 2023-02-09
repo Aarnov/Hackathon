@@ -5,10 +5,18 @@ import Modal.Departments;
 public class ShowRoom  extends Departments {
     int showing_cars ;
 
-    public ShowRoom(String depart_name, String depart_type, String opening_time, String closing_time, int showing_cars) {
-        super();
+    public ShowRoom(String location, boolean hasShowroom, boolean hasWorkshop, ArrayList<Departments> departments, String depart_name, String depart_type, String opening_time, String closing_time, int showing_cars) {
+        super(location, hasShowroom, hasWorkshop, departments, depart_name, depart_type, opening_time, closing_time);
         this.showing_cars = showing_cars;
     }
+
+    @Override public void enter_depart_info() {
+        super.enter_depart_info();
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter number of showing cars");
+        this.showing_cars = sc.nextInt();
+    }
+
     @Override
     public void depart_info () {
         if(isHasShowroom()==true){

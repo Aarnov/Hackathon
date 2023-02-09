@@ -31,10 +31,7 @@ public class HeadBranch {
         for (SubBranch branch:branches) {
             System.out.println(branch.getLocation());
             ArrayList<Departments> departments=branch.departments;
-            for (Departments depart:departments
-                 ) {
-                System.out.println(depart);
-            }
+
         }
     }
 }
