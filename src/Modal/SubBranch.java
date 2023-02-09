@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class SubBranch {
     String  location;
-    boolean hasShowroom;
+     boolean hasShowroom;
 
     boolean hasWorkshop ;
 
@@ -77,6 +77,8 @@ ArrayList<Departments> departments;
             this.hasWorkshop = false;
         }
     }
-
+public void  depart_info() {
+    System.out.println("Department location:"+this.location);
+}
 
 }

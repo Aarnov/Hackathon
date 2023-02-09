@@ -2,6 +2,9 @@ package Modal.subDepart;
 
 import Modal.Departments;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class ShowRoom  extends Departments {
     int showing_cars ;
 
@@ -19,7 +22,7 @@ public class ShowRoom  extends Departments {
 
     @Override
     public void depart_info () {
-        if(isHasShowroom()==true){
+        if(this.isHasShowroom()){
             super.depart_info();
             System.out.println("Showing cars:"+this.showing_cars);
         }
