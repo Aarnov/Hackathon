@@ -9,12 +9,12 @@ public class WorkShop extends SubBranch {
     public String contact;
     String aviliable_parts;
 
-    public WorkShop(String name, String type, String name1, String opening_time, String closing_time, String contact, String aviliable_parts) {
-        super(name, type);
+    public WorkShop(String name, String opening_time, String closing_time, String contact, String type, String name1, String opening_time1, String closing_time1, String contact1, String aviliable_parts) {
+        super(name, opening_time, closing_time, contact, type);
         this.name = name1;
-        this.opening_time = opening_time;
-        this.closing_time = closing_time;
-        this.contact = contact;
+        this.opening_time = opening_time1;
+        this.closing_time = closing_time1;
+        this.contact = contact1;
         this.aviliable_parts = aviliable_parts;
     }
 

@@ -18,6 +18,7 @@ public class Appointment  {
         this.ws = ws;
     }
 
+
     public User getUser() {
         return user;
     }

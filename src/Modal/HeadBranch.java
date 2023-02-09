@@ -18,6 +18,7 @@ ArrayList<Departments> departments;
     }
 
     public void show_branches() {
+
         for (Departments d : this.departments) {
             System.out.println(d.location);
             for (SubBranch j : d.subBranches) {

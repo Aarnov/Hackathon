@@ -10,12 +10,12 @@ public class CustomerService extends SubBranch {
     public String contact;
     String avialable_time;
 
-    public CustomerService(String name, String type, String name1, String opening_time, String closing_time, String contact, String avialable_time) {
-        super(name, type);
+    public CustomerService(String name, String opening_time, String closing_time, String contact, String type, String name1, String opening_time1, String closing_time1, String contact1, String avialable_time) {
+        super(name, opening_time, closing_time, contact, type);
         this.name = name1;
-        this.opening_time = opening_time;
-        this.closing_time = closing_time;
-        this.contact = contact;
+        this.opening_time = opening_time1;
+        this.closing_time = closing_time1;
+        this.contact = contact1;
         this.avialable_time = avialable_time;
     }
 
