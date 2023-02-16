@@ -55,35 +55,45 @@ public class Main {
             System.out.println("......................");
 
         }
+        System.out.println("Entering the data as User");
+        System.out.println(".........................");
         User u1 = new User();
         u1.addUserInfo();
-
         Departments d1 = new Departments(sub1);
         dep_list1.add(d1);
-        HeadBranch h1 = new HeadBranch(dep_list1);
-        h1.show_branches();
-        System.out.println("Which service would you wanna view?" +
-                " Enter the number.");
-        int num1 = sc.nextInt();
+        do {
 
-        SubBranch new_sub = new SubBranch(sub1.get(num1 - 1).getName(), sub1.get(num1 - 1).getOpening_time(), sub1.get(num1 - 1).getClosing_time(), sub1.get(num1 - 1).getContact(), sub1.get(num1 - 1).type);
+            HeadBranch h1 = new HeadBranch(dep_list1);
+            System.out.println();
+            h1.show_branches();
+            System.out.println("......................");
+            System.out.println("Which service would you wanna view?" +
+                    " Enter the number.");
+            int num1 = sc.nextInt();
 
+            SubBranch new_sub = new SubBranch(sub1.get(num1 - 1).getName(), sub1.get(num1 - 1).getOpening_time(), sub1.get(num1 - 1).getClosing_time(), sub1.get(num1 - 1).getContact(), sub1.get(num1 - 1).type);
 
-        if (new_sub.type.equalsIgnoreCase("customerservice")) {
-            System.out.println(u1.getName()+" has booked and appointment at our servicing center located at "+new_sub.getName()+"which opens from "+new_sub.getOpening_time()+" to "+new_sub.getOpening_time()+".\n If you would like to get in touch with one of our employes then be sure to contact us via our services.."+new_sub.getContact());
-        }
-
-        if (new_sub.type.equalsIgnoreCase("workshop")) {
-            System.out.println(u1.getName()+" has booked and appointment at our servicing center located at "+new_sub.getName()+"which opens from "+new_sub.getOpening_time()+" to "+new_sub.getOpening_time()+".\n If you would like to get in touch with one of our employes then be sure to contact us via our services.."+new_sub.getContact());
-        }
-
-        if (new_sub.type.equalsIgnoreCase("showroom")) {
-            System.out.println(u1.getName()+" has booked and appointment at our servicing center located at "+new_sub.getName()+"which opens from "+new_sub.getOpening_time()+" to "+new_sub.getOpening_time()+".\n If you would like to get in touch with one of our employes then be sure to contact us via our services.."+new_sub.getContact());
-        }
-
-
+                new_sub.display_info();
+            System.out.println("\nDo you want to book an appointment at this "+new_sub.type);
+            String responce=sc.next();
+            if(responce.equalsIgnoreCase("yes")){
+                System.out.println("Enter the data of the Appointment..");
+                String appointment_date = sc.next();
+                System.out.println("Enter the time of the Appointment..");
+                String appointment_time = sc.next();
 
 
+                Appointment a1 = new Appointment(appointment_date, appointment_time, u1, new_sub);
+                a1.displaying_appointment();
+            }
+
+            System.out.println("Do you want to close the Program?");
+            String yn=sc.next();
+            if(yn.equalsIgnoreCase("yes")){
+                break;
+            }
+
+        }while(true);
 
 
     }

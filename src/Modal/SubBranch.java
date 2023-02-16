@@ -1,5 +1,6 @@
 package Modal;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -59,4 +60,18 @@ public class SubBranch {
     public void setType(String type) {
         this.type = type;
     }
+
+    public void display_info(){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("-----"+getType()+"-----");
+        System.out.println("Location : "+getName());
+        System.out.println("Opening Time : "+getOpening_time());
+        System.out.println("Closing Time : "+getClosing_time());
+        System.out.println("Contact : "+getContact());
+
+
+
+
+    }
 }
+

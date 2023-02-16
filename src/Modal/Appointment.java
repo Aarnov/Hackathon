@@ -5,59 +5,68 @@ import Modal.subDepart.CustomerService;
 import Modal.subDepart.ShowRoom;
 import Modal.subDepart.WorkShop;
 
+import java.util.Scanner;
+
 public class Appointment  {
-    User user;
-    CustomerService cs;
-    ShowRoom sr;
-    WorkShop ws;
+    String appointment_date;
+    String appointment_time;
+    User suppose_user;
+    SubBranch suppose_branch;
 
-    public Appointment(User user, CustomerService cs, ShowRoom sr, WorkShop ws) {
-        this.user = user;
-        this.cs = cs;
-        this.sr = sr;
-        this.ws = ws;
+    public Appointment(String appointment_date, String appointment_time, User suppose_user, SubBranch suppose_branch) {
+        this.appointment_date = appointment_date;
+        this.appointment_time = appointment_time;
+        this.suppose_user = suppose_user;
+        this.suppose_branch = suppose_branch;
+    }
+
+    public String getAppointment_date() {
+        return appointment_date;
+    }
+
+    public void setAppointment_date(String appointment_date) {
+        this.appointment_date = appointment_date;
+    }
+
+    public String getAppointment_time() {
+        return appointment_time;
+    }
+
+    public void setAppointment_time(String appointment_time) {
+        this.appointment_time = appointment_time;
+    }
+
+    public User getSuppose_user() {
+        return suppose_user;
+    }
+
+    public void setSuppose_user(User suppose_user) {
+        this.suppose_user = suppose_user;
+    }
+
+    public SubBranch getSuppose_branch() {
+        return suppose_branch;
+    }
+
+    public void setSuppose_branch(SubBranch suppose_branch) {
+        this.suppose_branch = suppose_branch;
     }
 
 
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public CustomerService getCs() {
-        return cs;
-    }
-
-    public void setCs(CustomerService cs) {
-        this.cs = cs;
-    }
-
-    public ShowRoom getSr() {
-        return sr;
-    }
-
-    public void setSr(ShowRoom sr) {
-        this.sr = sr;
-    }
-
-    public WorkShop getWs() {
-        return ws;
-    }
-
-    public void setWs(WorkShop ws) {
-        this.ws = ws;
-    }
-
-    public void appointment_cs(){
-        System.out.println(getUser().getName()+" has booked and appointment at our servicing center located at "+getCs().getName()+"which opens from "+getCs().getOpening_time()+" to "+getCs().getOpening_time()+".\n If you would like to get in touch with one of our employes then be sure to contact us via our services.."+getCs().getContact());
-    }
-    public void appointment_sr(){
-        System.out.println(getUser().getName()+" has booked and appointment at our servicing center located at "+getSr().getName()+"which opens from "+ getSr().getOpening_time()+" to "+getSr().getClosing_time()+".\n If you would like to get in touch with one of our employes then be sure to contact us via our services.."+getCs().getContact());
-    }
-    public void appointment_ws(){
-        System.out.println(getUser().getName()+" has booked and appointment at our servicing center located at "+getWs().getName()+"which opens from "+getWs().getOpening_time()+" to "+getCs().closing_time+".\n If you would like to get in touch with one of our employes then be sure to contact us via our services.."+getCs().getContact());
+    public void displaying_appointment(){
+        System.out.println("Appointment Booking Bill");
+        System.out.println("------------------------");
+        System.out.println("Location: " + this.suppose_branch.getName());
+        System.out.println("Opening Time: " + this.suppose_branch.getOpening_time());
+        System.out.println("Closing Time: " + this.suppose_branch.getClosing_time());
+        System.out.println("Contact: " + this.suppose_branch.getContact());
+        System.out.println("------------------------");
+        System.out.println("Customer Name: " + this.suppose_user.getName());
+        System.out.println("Appointment Date: " + this.appointment_date);
+        System.out.println("Appointment Time: " + this.appointment_time);
+        System.out.println("Customer Contact: " + this.suppose_user.contact_no);
+        System.out.println("------------------------");
+        System.out.println("Your Appointment has been successfully booked.");
+        System.out.println("Thank you for your cooperation!");
     }
 }
